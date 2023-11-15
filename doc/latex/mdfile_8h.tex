@@ -1,0 +1,212 @@
+\hypertarget{mdfile_8h}{}\doxysection{mdfile.\+h File Reference}
+\label{mdfile_8h}\index{mdfile.h@{mdfile.h}}
+
+
+Описание класса \mbox{\hyperlink{classServer}{Server}}.  
+
+
+{\ttfamily \#include $<$netinet/in.\+h$>$}\newline
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$cassert$>$}\newline
+{\ttfamily \#include $<$arpa/inet.\+h$>$}\newline
+{\ttfamily \#include $<$cstdlib$>$}\newline
+{\ttfamily \#include $<$unistd.\+h$>$}\newline
+{\ttfamily \#include $<$ctime$>$}\newline
+{\ttfamily \#include $<$fstream$>$}\newline
+{\ttfamily \#include $<$sstream$>$}\newline
+{\ttfamily \#include $<$string$>$}\newline
+{\ttfamily \#include $<$cryptopp/cryptlib.\+h$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include $<$tuple$>$}\newline
+{\ttfamily \#include $<$getopt.\+h$>$}\newline
+{\ttfamily \#include $<$cryptopp/hex.\+h$>$}\newline
+{\ttfamily \#include $<$cryptopp/md5.\+h$>$}\newline
+Include dependency graph for mdfile.\+h\+:
+% FIG 0
+This graph shows which files directly or indirectly include this file\+:
+% FIG 1
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classerror__server}{error\+\_\+server}}
+\begin{DoxyCompactList}\small\item\em Класс для обработки ошибок возникающих при работе сервера \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classServer}{Server}}
+\begin{DoxyCompactList}\small\item\em Класс в котором находятся переменные и функция для подключения сервера к клиенту \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{mdfile_8h_a60054cd46e0dc2ed04249519a5291cda}\label{mdfile_8h_a60054cd46e0dc2ed04249519a5291cda}} 
+\#define {\bfseries CRYPTOPP\+\_\+\+ENABLE\+\_\+\+NAMESPACE\+\_\+\+WEAK}~1
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{mdfile_8h_aca36b4f222e88d8334a40aba414f7e39}\label{mdfile_8h_aca36b4f222e88d8334a40aba414f7e39}} 
+std\+::string {\bfseries MD} (std\+::string sah)
+\item 
+\mbox{\Hypertarget{mdfile_8h_aabd1b8a4be8092052914e8911cc38c3d}\label{mdfile_8h_aabd1b8a4be8092052914e8911cc38c3d}} 
+void {\bfseries errors} (string error, string file\+\_\+name, string file\+\_\+error)
+\item 
+\mbox{\Hypertarget{mdfile_8h_a2261239a94510c87c11a323b7aab50f9}\label{mdfile_8h_a2261239a94510c87c11a323b7aab50f9}} 
+void {\bfseries msgsend} (int work\+\_\+sock, string mess)
+\begin{DoxyCompactList}\small\item\em Функция для отправки сообщени \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{mdfile_8h_a2fe5e3dce11e43d39e3ff32f24c61e55}{autorized}} (int work\+\_\+sock, string file\+\_\+name, string file\+\_\+error)
+\begin{DoxyCompactList}\small\item\em Функция авторизации \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{mdfile_8h_a87fd77323b4c3ee742811a2b6b76dfa5}{math}} (int work\+\_\+sock)
+\begin{DoxyCompactList}\small\item\em Математическая функция \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Описание класса \mbox{\hyperlink{classServer}{Server}}. 
+
+Описание классов, подключение библиотек и переменных
+
+\begin{DoxyAuthor}{Author}
+Сёмов И.\+С. 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.\+0 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+15.\+11.\+20203 
+\end{DoxyDate}
+\begin{DoxyCopyright}{Copyright}
+ИБСТ ПГУ
+\end{DoxyCopyright}
+\begin{DoxyAuthor}{Author}
+Сёмов И.\+С. 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.\+0 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+15.\+11.\+2023 
+\end{DoxyDate}
+\begin{DoxyCopyright}{Copyright}
+ИБСТ ПГУ 
+\end{DoxyCopyright}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{mdfile_8h_a2fe5e3dce11e43d39e3ff32f24c61e55}\label{mdfile_8h_a2fe5e3dce11e43d39e3ff32f24c61e55}} 
+\index{mdfile.h@{mdfile.h}!autorized@{autorized}}
+\index{autorized@{autorized}!mdfile.h@{mdfile.h}}
+\doxysubsubsection{\texorpdfstring{autorized()}{autorized()}}
+{\footnotesize\ttfamily int autorized (\begin{DoxyParamCaption}\item[{int}]{work\+\_\+sock,  }\item[{string}]{file\+\_\+name,  }\item[{string}]{file\+\_\+error }\end{DoxyParamCaption})}
+
+
+
+Функция авторизации 
+
+подключение клиента к серверу и передача данных 
+\begin{DoxyParams}{Parameters}
+{\em work\+\_\+sock} & Рабоч1 сокет \\
+\hline
+{\em file\+\_\+name} & Файл БД \\
+\hline
+{\em file\+\_\+error} & Файл длязаписи ошибок\\
+\hline
+\end{DoxyParams}
+Авторизаця 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{         \textcolor{keywordtype}{string} ok = \textcolor{stringliteral}{"{}OK"{}};}
+\DoxyCodeLine{        \textcolor{keywordtype}{string} salt = \textcolor{stringliteral}{"{}2D2D2D2D2D2D2D22"{}};}
+\DoxyCodeLine{        \textcolor{keywordtype}{string} err = \textcolor{stringliteral}{"{}ERR"{}};}
+\DoxyCodeLine{        \textcolor{keywordtype}{string} error;}
+\DoxyCodeLine{        \textcolor{keywordtype}{char} msg[255];}
+\DoxyCodeLine{ }
+\DoxyCodeLine{*Авторизация}
+\DoxyCodeLine{ @code}
+\DoxyCodeLine{        \textcolor{comment}{//Авторизация}}
+\DoxyCodeLine{        recv(work\_sock, \&msg, \textcolor{keyword}{sizeof}(msg), 0);}
+\DoxyCodeLine{        \textcolor{keywordtype}{string} message = msg;}
+\DoxyCodeLine{            \textcolor{keywordtype}{string} login, hashq;}
+\DoxyCodeLine{ }
+\DoxyCodeLine{            fstream file;}
+\DoxyCodeLine{             file.open(file\_name);}
+\DoxyCodeLine{             \textcolor{keywordflow}{if}(!file.is\_open())\{}
+\DoxyCodeLine{                 cout << \textcolor{stringliteral}{"{}Ошибка открытия БД"{}} <<endl;}
+\DoxyCodeLine{                     error = \textcolor{stringliteral}{"{}Ошибка открытия БД"{}};}
+\DoxyCodeLine{                     \mbox{\hyperlink{mdfile_8cpp_a856c6e044a5163fbd20e899ce4d020a4}{errors}}(error, file\_error);}
+\DoxyCodeLine{                     \textcolor{keywordflow}{throw} \mbox{\hyperlink{classerror__server}{error\_server}}(\textcolor{keywordtype}{string}(error));}
+\DoxyCodeLine{             \}\textcolor{keywordflow}{else}\{}
+\DoxyCodeLine{             getline (file, login, \textcolor{charliteral}{':'});}
+\DoxyCodeLine{             getline (file, hashq);}
+
+\end{DoxyCode}
+ Сверка логинов 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{ \textcolor{comment}{//СВЕРКА ЛОГИНОВ}}
+\DoxyCodeLine{ \textcolor{keywordflow}{if}(message != login)\{}
+\DoxyCodeLine{     \mbox{\hyperlink{mdfile_8cpp_a2261239a94510c87c11a323b7aab50f9}{msgsend}}(work\_sock,  err);}
+\DoxyCodeLine{         error = \textcolor{stringliteral}{"{}Ошибка логина"{}};}
+\DoxyCodeLine{         \mbox{\hyperlink{mdfile_8cpp_a856c6e044a5163fbd20e899ce4d020a4}{errors}}(error, file\_error);}
+\DoxyCodeLine{         \textcolor{keywordflow}{throw} \mbox{\hyperlink{classerror__server}{error\_server}}(\textcolor{keywordtype}{string}(error));}
+\DoxyCodeLine{         close(work\_sock);}
+\DoxyCodeLine{     \textcolor{keywordflow}{return} 1;}
+\DoxyCodeLine{ \}\textcolor{keywordflow}{else}\{}
+\DoxyCodeLine{ \textcolor{comment}{//соль отправленная клиенту}}
+\DoxyCodeLine{ \mbox{\hyperlink{mdfile_8cpp_a2261239a94510c87c11a323b7aab50f9}{msgsend}}(work\_sock,  salt);}
+\DoxyCodeLine{ recv(work\_sock, msg, \textcolor{keyword}{sizeof}(msg), 0);}
+\DoxyCodeLine{ \textcolor{keywordtype}{string} sah = salt + hashq;}
+\DoxyCodeLine{\textcolor{keywordtype}{string} digest;}
+\DoxyCodeLine{ digest = MD(sah);}
+
+\end{DoxyCode}
+ Сверка паролей 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{comment}{//СВЕРКА ПАРОЛЕЙ}}
+\DoxyCodeLine{\textcolor{keywordflow}{if}(digest == msg)\{}
+\DoxyCodeLine{    cout << digest << endl;}
+\DoxyCodeLine{    cout << msg << endl;}
+\DoxyCodeLine{    \mbox{\hyperlink{mdfile_8cpp_a2261239a94510c87c11a323b7aab50f9}{msgsend}}(work\_sock,  err);}
+\DoxyCodeLine{        error = \textcolor{stringliteral}{"{}Ошибка пароля"{}};}
+\DoxyCodeLine{        \mbox{\hyperlink{mdfile_8cpp_a856c6e044a5163fbd20e899ce4d020a4}{errors}}(error, file\_error);}
+\DoxyCodeLine{        \textcolor{keywordflow}{throw} \mbox{\hyperlink{classerror__server}{error\_server}}(\textcolor{keywordtype}{string}(error));}
+\DoxyCodeLine{    close(work\_sock);}
+\DoxyCodeLine{    \textcolor{keywordflow}{return} 1;}
+\DoxyCodeLine{\}\textcolor{keywordflow}{else}\{}
+\DoxyCodeLine{    \mbox{\hyperlink{mdfile_8cpp_a2261239a94510c87c11a323b7aab50f9}{msgsend}}(work\_sock,  ok);}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+ \} return 1; \} \mbox{\Hypertarget{mdfile_8h_a87fd77323b4c3ee742811a2b6b76dfa5}\label{mdfile_8h_a87fd77323b4c3ee742811a2b6b76dfa5}} 
+\index{mdfile.h@{mdfile.h}!math@{math}}
+\index{math@{math}!mdfile.h@{mdfile.h}}
+\doxysubsubsection{\texorpdfstring{math()}{math()}}
+{\footnotesize\ttfamily int math (\begin{DoxyParamCaption}\item[{int}]{work\+\_\+sock }\end{DoxyParamCaption})}
+
+
+
+Математическая функция 
+
+подключение клиента к серверу и передача данных 
+\begin{DoxyParams}{Parameters}
+{\em work\+\_\+sock} & Рабоч1 сокет Математическая операция 
+\begin{DoxyCode}{1}
+\DoxyCodeLine{int32\_t kolvo;}
+\DoxyCodeLine{int32\_t numb;}
+\DoxyCodeLine{\textcolor{keywordtype}{double} vect;}
+\DoxyCodeLine{    recv(work\_sock, \&kolvo, \textcolor{keyword}{sizeof}(kolvo), 0);}
+\DoxyCodeLine{\textcolor{comment}{//цикл векторов}}
+\DoxyCodeLine{\textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} j=0; j<kolvo; j++)\{}
+\DoxyCodeLine{    recv(work\_sock, \&numb, \textcolor{keyword}{sizeof}(numb), 0);\textcolor{comment}{//прием длинны для первого вектора}}
+\DoxyCodeLine{    \textcolor{keywordtype}{double} sum = 0;}
+\DoxyCodeLine{\textcolor{comment}{//цикл значений}}
+\DoxyCodeLine{\textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i=0; i<numb; i++)\{}
+\DoxyCodeLine{    recv(work\_sock, \&vect, \textcolor{keyword}{sizeof}(vect), 0);}
+\DoxyCodeLine{    sum = sum + vect*vect;}
+\DoxyCodeLine{\}}
+\DoxyCodeLine{\textcolor{keywordtype}{double} mfc;}
+\DoxyCodeLine{mfc = sum;}
+\DoxyCodeLine{}
+\DoxyCodeLine{send(work\_sock, \&mfc, \textcolor{keyword}{sizeof}(mfc), 0);}
+\DoxyCodeLine{\}}
+\DoxyCodeLine{cout << \textcolor{stringliteral}{"{}Program finish!"{}} <<endl;}
+\DoxyCodeLine{close(work\_sock);}
+\DoxyCodeLine{\textcolor{keywordflow}{return} 1;}
+
+\end{DoxyCode}
+\\
+\hline
+\end{DoxyParams}

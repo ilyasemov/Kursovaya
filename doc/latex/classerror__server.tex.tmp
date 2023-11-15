@@ -1,0 +1,36 @@
+\hypertarget{classerror__server}{}\doxysection{error\+\_\+server Class Reference}
+\label{classerror__server}\index{error\_server@{error\_server}}
+
+
+Класс для обработки ошибок возникающих при работе сервера  
+
+
+
+
+{\ttfamily \#include $<$mdfile.\+h$>$}
+
+
+
+Inheritance diagram for error\+\_\+server\+:
+% FIG 0
+
+
+Collaboration diagram for error\+\_\+server\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classerror__server_ad3b9c18ee34c6c8706a1d83d579fd3ef}\label{classerror__server_ad3b9c18ee34c6c8706a1d83d579fd3ef}} 
+{\bfseries error\+\_\+server} (const string \&what\+\_\+arg)
+\item 
+\mbox{\Hypertarget{classerror__server_a4980fc887f7d6d51e420f14e56d4a638}\label{classerror__server_a4980fc887f7d6d51e420f14e56d4a638}} 
+{\bfseries error\+\_\+server} (const char $\ast$what\+\_\+arg)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Класс для обработки ошибок возникающих при работе сервера 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{mdfile_8h}{mdfile.\+h}}\end{DoxyCompactItemize}
